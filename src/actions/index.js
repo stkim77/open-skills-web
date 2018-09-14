@@ -1,6 +1,4 @@
 import ActionEnum from './ActionEnum';
-import * as Util from "../common/Util";
-const BASE_URL = "http://localhost:3000/";
 
 export {
     ActionEnum
@@ -32,23 +30,4 @@ export const hideLoading = () => {
         type        : ActionEnum.LOADING_HIDE,
         contents    : false
     };
-};
-
-export const fetchGetArticles = (dispatch, getState) => {
-    fetch(BASE_URL + 'articles', {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json; charset=utf-8',
-            'Content-Type': 'application/json; charset=utf-8',
-        },
-        mode : 'cors'
-    })
-        .then((response) => response.json())
-        .then((responseJson) => {
-            console.log(responseJson);
-            console.log(responseJson.result);
-            dispatch(login());
-        })
-        .catch(err=>{console.log(err); dispatch(hideLoading);});
-
 };

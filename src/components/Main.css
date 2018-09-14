@@ -11,3 +11,8 @@
 .main .header div {
     cursor: pointer;
 }
+
+.main .contents .article_div {
+    cursor: pointer;
+    margin: 10px 20px;
+}
