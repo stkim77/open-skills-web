@@ -1,0 +1,27 @@
+.singin {
+
+}
+
+.singin .singin_main {
+    display         : flex;
+    flex-direction  : column;
+    width           : 500px;
+    align-items     : center;
+    margin          : 50px auto;
+}
+
+.singin .singin_main .signin_title {
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+.singin .singin_main .signin_form .submit_div {
+    display         : flex;
+    justify-content : space-around;
+    margin          : 20px 0;
+}
+
+.createLabel {
+    cursor: pointer;
+}

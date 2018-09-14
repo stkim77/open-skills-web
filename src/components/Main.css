@@ -1,0 +1,13 @@
+.main {
+
+}
+
+.main .header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+.main .header div {
+    cursor: pointer;
+}
