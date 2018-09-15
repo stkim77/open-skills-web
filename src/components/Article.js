@@ -7,17 +7,23 @@ import { Link, Redirect, Route } from "react-router-dom";
 import './Article.css';
 
 class Article extends React.Component {
+
     render() {
+
+        let data = Util.getArticleInfo(this.props.match.params.articleId);
         return (
             <div className='article'>
                 <div className='header'>
                     <div>
                         <Link to={'/main'}>Main</Link>
                     </div>
-                    <div onClick={()=>{Util.setUserInfo('');this.props.logout();}}>log-out</div>
+                    <div onClick={()=>{Util.setUserInfo({});this.props.logout();}}>log-out</div>
                 </div>
                 <div className='contents'>
-                    {'Article ' + JSON.stringify(this.props.match.params.articleId, null, 2)}
+                    <h1>{data[0]}</h1>
+                    <h6>{data[2]}</h6>
+                    <p>{data[1]}</p>
+                    
                 </div>
                 {
                     !this.props.isLogged &&

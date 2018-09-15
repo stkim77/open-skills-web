@@ -59,7 +59,7 @@ class SignIn extends React.Component {
                     <form onSubmit={this.clickSubmit}>
                         <div className='input_div'>
                             <div>{'E-mail :'}</div>
-                            <input type='email' defaultValue='' ref={this.emailRef} placeholder='example@example.com' />
+                            <input type='text' defaultValue='' ref={this.emailRef} placeholder='example@example.com' />
                         </div>
                         <div className='input_div'>
                             <div>{'Password :'}</div>
@@ -117,7 +117,7 @@ class SignIn extends React.Component {
                 console.log(responseJson);
                 console.log(responseJson.result);
                 this.props.hideLoading();
-                Util.setUserInfo('true');
+                Util.setUserInfo(bodyJson);
                 this.props.login();
             })
             .catch(err=>{console.log(err);this.props.hideLoading();});
@@ -141,7 +141,7 @@ class SignIn extends React.Component {
                 console.log(responseJson);
                 console.log(responseJson.result);
                 this.props.hideLoading();
-                Util.setUserInfo('true');
+                Util.setUserInfo(bodyJson);
                 this.props.login();
             })
             .catch(err=>{console.log(err);this.props.hideLoading();});

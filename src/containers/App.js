@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Article, SignIn, Main, NoMatch, Spinner } from '../components';
+import { Article, Editor, SignIn, Main, NoMatch, Spinner } from '../components';
 import { login, logout, showLoading, hideLoading } from '../actions';
 import * as Util from '../common/Util';
 
@@ -21,6 +21,7 @@ class App extends React.Component {
                         <Route exact path="/" render={()=>(<Redirect to="/main"/>)}/>
                         <Route path="/main" component={Main}/>
                         <Route path="/signin" component={SignIn}/>
+                        <Route path="/article/editor" component={Editor}/>
                         <Route path="/article/:articleId" component={Article}/>
                         <Route component={NoMatch}/>
                     </Switch>

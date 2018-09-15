@@ -1,0 +1,17 @@
+.article {
+
+}
+
+.article .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.article .header div {
+    cursor: pointer;
+}
+
+.article .contents {
+    margin: 10px 20px;
+}

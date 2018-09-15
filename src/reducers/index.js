@@ -2,7 +2,8 @@ import { combineReducers } from 'redux';
 import { ActionEnum } from '../actions';
 
 const userInitialState = {
-    isLogged : false
+    isLogged : false,
+    isUploaded : false
 };
 
 const user = (state = userInitialState, action) => {
